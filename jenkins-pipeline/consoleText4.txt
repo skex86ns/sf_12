@@ -1,0 +1,30 @@
+Started by user SKE
+Obtained jenkins-pipeline/Jenkinsfile4 from git git@github.com:skex86ns/sf_12.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/job-4
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Stage)
+[Pipeline] sshCommand
+Executing command on prod[192.168.88.102]: uptime sudo: false
+ 12:51:16 up  3:13,  1 user,  load average: 0.00, 0.01, 0.05
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/job-4
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Prod)
+[Pipeline] sshCommand
+Executing command on prod[192.168.88.103]: uptime sudo: false
+ 12:51:17 up  3:13,  1 user,  load average: 0.01, 0.03, 0.05
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

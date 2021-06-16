@@ -1,0 +1,18 @@
+Started by user SKE
+Obtained jenkins-pipeline/Jenkinsfile2 from git git@github.com:skex86ns/sf_12.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/job-2
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Remote SSH)
+[Pipeline] sshCommand
+Executing command on prod[192.168.88.103]: docker run --name some-wordpress -p 8080:80 -d wordpress sudo: false
+09e5305bb8024b872acee89b3cf7d11b86a8df3c34284c8c01bcd16555d11646
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

@@ -1,0 +1,74 @@
+Запуск для STAGE >>
+Started by user SKE
+Obtained jenkins-pipeline/Jenkinsfile5 from git git@github.com:skex86ns/sf_12.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/job-5
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Stage)
+[Pipeline] sshCommand
+Executing command on ssh remote[192.168.88.102]: sudo shutdown -r now sudo: false
+Failed command ssh remote#11 with status -1: sudo shutdown -r now
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+<<
+
+Запуск для PROD >>
+Started by user SKE
+Obtained jenkins-pipeline/Jenkinsfile5 from git git@github.com:skex86ns/sf_12.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/job-5
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Stage)
+[Pipeline] sshCommand
+Executing command on ssh remote[192.168.88.103]: sudo shutdown -r now sudo: false
+Failed command ssh remote#12 with status -1: sudo shutdown -r now
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+<<
+
+Запуск для ALL >>
+Started by user SKE
+Obtained jenkins-pipeline/Jenkinsfile5 from git git@github.com:skex86ns/sf_12.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/job-5
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Stage)
+[Pipeline] sshCommand
+Executing command on ssh remote[192.168.88.102]: sudo shutdown -r now sudo: false
+Failed command ssh remote#13 with status -1: sudo shutdown -r now
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/job-5
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Stage)
+[Pipeline] sshCommand
+Executing command on ssh remote[192.168.88.103]: sudo shutdown -r now sudo: false
+Failed command ssh remote#14 with status -1: sudo shutdown -r now
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
+<<

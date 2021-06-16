@@ -1,0 +1,70 @@
+Started by user SKE
+Obtained jenkins-pipelineJenkinsfile3 from git git@github.comskex86nssf_12.git
+Running in Durability level MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in varlibjenkinsworkspacejob-3
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative Checkout SCM)
+[Pipeline] checkout
+Selected Git installation does not exist. Using Default
+The recommended git tool is NONE
+using credential jenkins-sshkey
+  git rev-parse --resolve-git-dir varlibjenkinsworkspacejob-3.git # timeout=10
+Fetching changes from the remote Git repository
+  git config remote.origin.url git@github.comskex86nssf_12.git # timeout=10
+Fetching upstream changes from git@github.comskex86nssf_12.git
+  git --version # timeout=10
+  git --version # 'git version 1.8.3.1'
+using GIT_SSH to set credentials jenkins-sshkey
+[INFO] Currently running in a labeled security context
+[INFO] Currently SELinux is 'enforcing' on the host
+  usrbinchcon --type=ssh_home_t varlibjenkinsworkspacejob-3@tmpjenkins-gitclient-ssh7623116831500748317.key
+  git fetch --tags --progress git@github.comskex86nssf_12.git +refsheadsrefsremotesorigin # timeout=10
+  git rev-parse refsremotesoriginmain^{commit} # timeout=10
+Checking out Revision eee40fa2ea81d44d245059d31133b853128cb754 (refsremotesoriginmain)
+  git config core.sparsecheckout # timeout=10
+  git checkout -f eee40fa2ea81d44d245059d31133b853128cb754 # timeout=10
+Commit message first commit
+  git rev-list --no-walk eee40fa2ea81d44d245059d31133b853128cb754 # timeout=10
+[Pipeline] }
+[Pipeline]  stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Job-3)
+[Pipeline] parallel
+[Pipeline] { (Branch Test Stage)
+[Pipeline] { (Branch Test Prod)
+[Pipeline] stage
+[Pipeline] { (Test Stage)
+[Pipeline] stage
+[Pipeline] { (Test Prod)
+[Pipeline] echo
+Start ping
+[Pipeline] sh
+[Pipeline] echo
+Start ping
+[Pipeline] sh
++ ping -c 1 -s 1 192.168.88.102
++ ping -c 1 -s 1 192.168.88.103
+[Pipeline] echo
+End ping
+[Pipeline] }
+[Pipeline] echo
+End ping
+[Pipeline] }
+[Pipeline]  stage
+[Pipeline]  stage
+[Pipeline] }
+[Pipeline] }
+[Pipeline]  parallel
+[Pipeline] }
+[Pipeline]  stage
+[Pipeline] }
+[Pipeline]  withEnv
+[Pipeline] }
+[Pipeline]  node
+[Pipeline] End of Pipeline
+Finished SUCCESS
