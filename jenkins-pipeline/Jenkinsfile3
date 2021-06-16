@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage('Job-3') {
+			parallel {
+                stage('Test Stage') {
+                    steps {
+							echo "Start ping"
+							sh   "ping -c 1 -s 1 192.168.88.102"
+							echo "End ping"
+                    }
+                }
+                stage('Test Prod') {
+                    steps {
+							echo "Start ping"
+							sh   "ping -c 1 -s 1 192.168.88.103"
+							echo "End ping"
+                    }
+                }
+            }
+        }
+    }
+}

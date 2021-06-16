@@ -1,0 +1,22 @@
+node {
+  def remote = [:]
+  remote.name = 'prod'
+  remote.host = '192.168.88.102'
+  remote.user = 'jenkins'
+  remote.identityFile = '/home/jenkins/.ssh/id_rsa'
+  remote.allowAnyHosts = true
+  stage('Stage') {
+    sshCommand remote: remote, command: "uptime"
+  }
+}
+node {
+  def remote = [:]
+  remote.name = 'prod'
+  remote.host = '192.168.88.103'
+  remote.user = 'jenkins'
+  remote.identityFile = '/home/jenkins/.ssh/id_rsa'
+  remote.allowAnyHosts = true
+  stage('Prod') {
+    sshCommand remote: remote, command: "uptime"
+  }
+}

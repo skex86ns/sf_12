@@ -1,0 +1,6 @@
+[master]
+jenkins-ci ansible_host=192.168.88.101 ansible_user=root ansible_password=kirill1986
+
+[workers]
+stage ansible_host=192.168.88.102 ansible_user=root ansible_password=kirill1986
+prod ansible_host=192.168.88.103 ansible_user=root ansible_password=kirill1986

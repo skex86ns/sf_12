@@ -1,0 +1,72 @@
+switch(HOSTNAME) {
+  case "STAGE":
+node {
+  def remote = [:]
+  remote.name = 'ssh remote'
+  remote.host = '192.168.88.102'
+  remote.user = 'jenkins'
+  remote.identityFile = '/home/jenkins/.ssh/id_rsa'
+  remote.allowAnyHosts = true
+  stage('Stage') {
+try {
+    sshCommand remote: remote, command: "sudo shutdown -r now"
+}
+        catch(all) {
+        currentBuild.result = 'SUCCESS'
+    }
+  }
+}
+    break
+  case "PROD":
+node {
+  def remote = [:]
+  remote.name = 'ssh remote'
+  remote.host = '192.168.88.103'
+  remote.user = 'jenkins'
+  remote.identityFile = '/home/jenkins/.ssh/id_rsa'
+  remote.allowAnyHosts = true
+  stage('Stage') {
+try {
+    sshCommand remote: remote, command: "sudo shutdown -r now"
+}
+            catch(all) {
+        currentBuild.result = 'SUCCESS'
+    }
+  }
+}
+    break
+  case "ALL":
+node {
+  def remote = [:]
+  remote.name = 'ssh remote'
+  remote.host = '192.168.88.102'
+  remote.user = 'jenkins'
+  remote.identityFile = '/home/jenkins/.ssh/id_rsa'
+  remote.allowAnyHosts = true
+  stage('Stage') {
+try {
+    sshCommand remote: remote, command: "sudo shutdown -r now"
+}
+            catch(all) {
+        currentBuild.result = 'SUCCESS'
+    }
+  }
+}
+node {
+  def remote = [:]
+  remote.name = 'ssh remote'
+  remote.host = '192.168.88.103'
+  remote.user = 'jenkins'
+  remote.identityFile = '/home/jenkins/.ssh/id_rsa'
+  remote.allowAnyHosts = true
+  stage('Stage') {
+try {
+    sshCommand remote: remote, command: "sudo shutdown -r now"
+}
+            catch(all) {
+        currentBuild.result = 'SUCCESS'
+    }
+  }
+}
+    break
+}

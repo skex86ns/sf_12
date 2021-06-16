@@ -1,0 +1,11 @@
+node {
+  def remote = [:]
+  remote.name = 'stage'
+  remote.host = '192.168.88.102'
+  remote.user = 'jenkins'
+  remote.identityFile = '/home/jenkins/.ssh/id_rsa'
+  remote.allowAnyHosts = true
+  stage('Remote SSH') {
+    sshCommand remote: remote, command: "docker run --name some-wordpress -p 8080:80 -d wordpress"
+  }
+}
